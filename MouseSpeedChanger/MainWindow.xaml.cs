@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
+
 namespace MouseSpeedChanger
 {
 
@@ -48,6 +50,12 @@ namespace MouseSpeedChanger
         private void FastMouseSpeed(object sender, RoutedEventArgs e)
         {
             SetMouseSpeed(15);
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            SetMouseSpeed((int)SliderMouseSpeed.Value);
+            SliderValueLabel.Content = Math.Round(SliderMouseSpeed.Value).ToString();
         }
     }
 }
