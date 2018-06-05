@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MouseSpeedChanger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="100" Width="300">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Click="FastMouseSpeed">Fast</Button>
+        <Button Grid.Column="2" Click="DefaultMouseSpeed">Slow</Button>
+        <Button Grid.Column="1" Click="SlowMouseSpeed">Default</Button>
     </Grid>
 </Window>
